@@ -28,6 +28,7 @@ filtered_df = o_df[(o_df['timestamp'] >= "2021-01-01") & (o_df['timestamp'] <= "
 result_time = filtered_df.groupby("Sector").agg({'open':'mean','close':'mean','high':'max','low':'min','volume':'mean'}).reset_index()
 list_sector = ["TECHNOLOGY","FINANCE"]
 result_time = result_time[result_time["Sector"].isin(list_sector)].reset_index(drop=True)
+print(result_time)
 path = r"C:\Users\Deepika Mohan\OneDrive\Documents\stock_data.csv"
 result_time.to_csv(path, header=True)
 print('data saved sucessfully')
