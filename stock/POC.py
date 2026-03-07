@@ -32,3 +32,5 @@ print(result_time)
 path = r"C:\Users\Deepika Mohan\OneDrive\Documents\stock_data.csv"
 result_time.to_csv(path, header=True)
 print('data saved sucessfully')
+
+#This project is a mini data engineering project #
