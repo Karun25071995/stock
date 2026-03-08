@@ -29,7 +29,7 @@ result_time = filtered_df.groupby("Sector").agg({'open':'mean','close':'mean','h
 list_sector = ["TECHNOLOGY","FINANCE"]
 result_time = result_time[result_time["Sector"].isin(list_sector)].reset_index(drop=True)
 print(result_time)
-path = r"C:\Users\Deepika Mohan\OneDrive\Documents\stock_data.csv"
+path = r"/Users/karuns/Desktop/Stock_project/stock/stock_data.csv"
 result_time.to_csv(path, header=True)
 print('data saved sucessfully')
 
